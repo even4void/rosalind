@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
 
-# Problem 6
-# Given two strings s and t of equal length, the Hamming distance between s and t,
-# denoted dH(s,t), is the number of corresponding symbols that differ in s and t.
 # Given: Two DNA strings s and t of equal length (not exceeding 1 kbp).
 # Return: The Hamming distance dH(s,t).
+
 
 # Peter Wegner. A technique for counting ones in a binary computer,
 # Communications of the ACM 3 (5): 322, 1960.
 def hamming_bit(x, y):
-    """ Calculate the Hamming distance between two bit strings """
+    """Calculate the Hamming distance between two bit strings."""
     assert len(x) == len(y)
-    count, z = 0, int(x,2)^int(y,2)
+    count, z = 0, int(x, 2)^int(y, 2)
     while z:
         count += 1
         z &= z-1
     return count
 
+
 def hamming(x, y):
-    """ Calculate the Hamming distance between two strings """
+    """Calculate the Hamming distance between two strings."""
     assert len(x) == len(y)
     return sum(s1 != s2 for s1, s2 in zip(x, y))
+
 
 s1 = "GAACTACTTTTCTCAGATAGCGCACAAGCCTTCACGTTCGAGCAGGCCCAGTTCGACTTAT \
       AATATTTTATAGGAAAAGAAGCCTCAGGCCGATGGAAGCTTTCTGCGGAACGCGACATCCC \

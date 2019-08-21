@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 
-# Problem 9
-# Given two strings s and t, t is a substring of s if t is contained
-# as a contiguous collection of symbols in s (as a result, t  must be
-# no longer than s).
 # Given: Two DNA strings s and t (each of length at most 1 kbp).
 # Return: All locations of t as a substring of s.
 
 
 # FIXME: write a more elegant recursive solution!
 def get_matches(s, r):
-    """ Returns the 1-based index of substring r in s. """
+    """Returns the 1-based index of substring r in s."""
     matches = []
     lg = len(r)
     for i in range(len(s) - lg + 1):
         if s[i:(i+lg)] == r:
-            matches.append(i+1)
+            matches.append(i + 1)
     return matches
 
 

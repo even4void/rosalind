@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-# Problem xxx
 # Given: A collection of DNA strings in FASTA format having total length
 # at most 10 kbp.
 # Return: The adjacency list corresponding to O3. You may return edges
@@ -26,6 +25,7 @@ def adjacency(seq, k=3):
             edges.append((u, v))
 
     return edges
+
 
 records = SeqIO.to_dict(SeqIO.parse("grph.txt", "fasta"))
 print('\n'.join([' '.join([a, b]) for (a, b) in adjacency(records, 3)]))
