@@ -16,3 +16,5 @@
 - [x] IEV -- Calculating Expected Offspring
 - [x] LIA -- Independent Alleles
 - [x] PROB -- Introduction to Random Strings
+- [x] GRPH -- Overlap Graphs
+- [x] LSCM -- Finding a Shared Motif
