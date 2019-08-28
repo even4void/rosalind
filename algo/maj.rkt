@@ -1,10 +1,10 @@
 #lang racket
 
-(define (counter lst #:item x)
+(define (counter x lst)
   (if (null? lst) 0
       (if (= x (car lst))
-          (+ 1 (counter (cdr lst) x))
-          (counter (cdr lst) x))))
+          (+ 1 (counter x (cdr lst)))
+          (counter x (cdr lst)))))
 
 (define items (list 8 7 7 7 1 7 3 7))
-(apply counter items #:item (remove-duplicates items))
+(apply max (for/list ([i (remove-duplicates items)]) (counter i items)))
