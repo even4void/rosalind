@@ -6,5 +6,10 @@
           (+ 1 (counter x (cdr lst)))
           (counter x (cdr lst)))))
 
+(define (reader filename)
+  (display "write me"))
+
 (define items (list 8 7 7 7 1 7 3 7))
+
+;; FIXME display i and (counter i items)
 (apply max (for/list ([i (remove-duplicates items)]) (counter i items)))
