@@ -11,8 +11,9 @@ with open("mprt.txt") as f:
         h = ExPASy.get_sprot_raw(line.strip())
         s = SeqIO.read(h, "swiss")
         match = regex.finditer(str(s.seq))
-
-        print(line.strip())
-        for k in match:
-            print(k.start()+1, end=" ")
-        print()
+        # FIXME We should discard empty line
+        if match:
+            print(line.strip())
+            for k in match:
+                print(k.start()+1, end=" ")
+            print()
