@@ -7,4 +7,4 @@ def pper(n, k):
     return factorial(n) / factorial(n - k)
 
 
-print(int(pper(83, 10) % 1000000))
+print(int(pper(93, 9) % 1000000))
