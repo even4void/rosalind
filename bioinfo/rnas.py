@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 
@@ -15,7 +14,7 @@ def pair(seq):
     return prev[seq]
 
 
-match = {'A':'U', 'U':'AG', 'C':'G', 'G':'CU'}
+match = {"A": "U", "U": "AG", "C": "G", "G": "CU"}
 prev = {}
 
 with open("rnas.txt", "r") as fh:
