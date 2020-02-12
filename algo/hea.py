@@ -33,11 +33,10 @@ if __name__ == '__main__':
     import doctest
     doctest.testmod()
 
-    items = []
     with open("hea.txt") as f:
         next(f)
         for line in f:
-            items.append(map(int, line.strip().split()))
+            items = list(map(int, line.strip().split()))
     f.close()
 
     max_heap(items)
